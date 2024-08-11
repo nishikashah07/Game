@@ -1,0 +1,201 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Agency FB', arial, sans-serif;
+    color: rgb(255, 255, 255); /* Ensure text is visible against the background */
+
+}
+
+#backgroundVideo {
+    position: fixed; /* Ensure the video stays fixed in the background */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: -1; /* Keep the video behind other content */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensure the video covers the entire background */
+}
+#overlay {
+    position: fixed;
+    font-family: 'Agency FB', arial, sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay to enhance text readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#nameContainer, #yearContainer, #contactContainer{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+#name, #year, #contact{
+    width: 80%;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#next{
+    width:40% ;
+    padding: 1px;
+    margin: 10px 0;
+}
+
+
+#nameForm{
+    background: rgba(255, 255, 255, 0.13); 
+    color: rgb(253, 251, 251);
+    padding: 1px;
+    margin: 1px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Agency FB', arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none; /* Remove box shadow */
+    text-align: center;
+    margin: 20px;
+    background: transparent; /* Remove background color */
+}
+
+.hide {
+    display: none;
+}
+
+#mainHeading {
+    font-size: 4em; /* Increased by 2 from original 2em */
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.start-button, 
+button {
+    background: rgba(255, 255, 255, 0.13); 
+    color: white;
+    padding: 1px 25px;
+    margin: 0px;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 50px;
+    font-family: 'Agency FB', arial, sans-serif;
+}
+
+.start-button:hover {
+    background-color: rgba(255, 255, 255); 
+    color: black;
+    text-decoration: underline;
+    opacity: 0.8;
+}
+button:hover{
+    background-color: rgba(255, 255, 255); 
+    color: black;
+    opacity: 0.8;
+}
+
+.question {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Agency FB', arial, sans-serif;
+    font-style: italic;
+    padding: 25px;
+    
+}
+
+.options button {
+    font-size: 1.5em;
+    margin-bottom: 1%;
+    display: block;
+    width: 50%;
+    height: 50px;
+    margin-left: 30%;
+    text-size-adjust: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', cursive;
+}
+
+.committee-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.committee-info img {
+    max-width: 200px; 
+    border-radius: 10px;
+
+    
+    animation: rotateLogo 2s ease-out 1 forwards;
+}
+
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg); 
+    }
+    50% {
+        transform: rotate(720deg); 
+    }
+    100% {
+        transform: rotate(720deg); 
+    }
+}
+
+.additional-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', cursive;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    padding-left: 100%; 
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0); 
+    }
+    to {
+        transform: translateX(-100%); 
+    }
+}
+
+
+
