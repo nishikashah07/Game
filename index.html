@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <div id="test">
+            
+        </div>
+        <div>
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src= "video 1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+
+    <div id="overlay">
+        <h1 style="font-family: 'Agency FB', arial, sans-serif;;" id="mainHeading">Committee Predictor</h1>
+        
+        <div id="startContainer" class="container">
+            <button id="startButton" class="start-button"><h1 style="font-family: 'Agency FB', arial, sans-serif">Start</h1></button>
+        </div>
+
+        <div id="nameContainer" class="container hide">
+            <form id="nameForm">
+                <label for="name">
+                    <h1>Enter your name:</h1>
+                </label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <button id="next" type="submit"><h1>Next</h1></button>
+            </form>
+        </div>
+
+        <div id="yearContainer" class="container hide">
+            <form id="yearForm">
+                <label for="year"><h1>Enter your year of study:</h1></label>
+                <input type="text" id="year" name="year" required>
+                <button id="next" type="submit"><h1>Next</h1></button>
+            </form>
+        </div>
+
+        <div id="contactContainer" class="container hide">
+            <form id="contactForm">
+                <label for="contact"><h1>Enter your contact information:</h1></label>
+                <input type="text" id="contact" name="contact" required>
+                <button id="next" type="submit"><h1>Next</h1></button>
+            </form>
+        </div>
+
+        <div id="questionContainer" class="container hide">
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+        </div>
+
+        <div id="resultContainer" class="container hide">
+            <div id="resultMessage" class="result-message"></div>
+            <div id="committeeInfo" class="committee-info"></div>
+            <div class="additional-message">
+                <div class="marquee">This person is best suited for this committee.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
